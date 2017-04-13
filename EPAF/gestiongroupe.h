@@ -15,6 +15,10 @@ public:
     explicit gestiongroupe(QWidget *parent = 0);
     ~gestiongroupe();
 
+public slots:
+    void AjouterGroupe();
+    void validerAjouterGroupe();
+
 private:
     Ui::gestiongroupe *ui;
 };
