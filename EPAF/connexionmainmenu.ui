@@ -17,61 +17,99 @@
    <widget class="QStackedWidget" name="MainMenustackedWidget">
     <property name="geometry">
      <rect>
-      <x>-10</x>
+      <x>0</x>
       <y>0</y>
-      <width>951</width>
-      <height>671</height>
+      <width>1001</width>
+      <height>681</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="formLayoutWidget_7">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>170</y>
-        <width>381</width>
-        <height>71</height>
+        <x>190</x>
+        <y>410</y>
+        <width>611</width>
+        <height>61</height>
        </rect>
       </property>
-      <layout class="QFormLayout" name="formLayout_7">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_44">
+      <layout class="QFormLayout" name="connexionformLayout">
+       <item row="1" column="0">
+        <widget class="QLabel" name="nomUtilisateurlabel">
          <property name="text">
           <string>Nom d'utilisateur</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_28"/>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="nomUtilisateurlineEdit"/>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_45">
+       <item row="2" column="0">
+        <widget class="QLabel" name="motPasselabel">
          <property name="text">
           <string>Mot de passe</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_29"/>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="motPasselineEdit">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="connexionpushButton">
+     <widget class="QLabel" name="logolabel">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>250</y>
-        <width>75</width>
-        <height>23</height>
+        <x>240</x>
+        <y>90</y>
+        <width>524</width>
+        <height>227</height>
        </rect>
       </property>
       <property name="text">
-       <string>Connexion</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="ressources.qrc">:/img/logo_epaf.jpg</pixmap>
       </property>
      </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>470</y>
+        <width>611</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="connexionButtonhorizontalLayout">
+       <item>
+        <widget class="QPushButton" name="connexionpushButton">
+         <property name="text">
+          <string>Connexion</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="annulerpushButton">
+         <property name="text">
+          <string>Annuler</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <zorder>logolabel</zorder>
+     <zorder>formLayoutWidget_7</zorder>
+     <zorder>logolabel</zorder>
+     <zorder>pushButton</zorder>
+     <zorder>horizontalLayoutWidget</zorder>
     </widget>
     <widget class="QWidget" name="page_2">
      <widget class="QWidget" name="MenuP" native="true">
@@ -166,6 +204,52 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
- <connections/>
+ <tabstops>
+  <tabstop>nomUtilisateurlineEdit</tabstop>
+  <tabstop>motPasselineEdit</tabstop>
+  <tabstop>connexionpushButton</tabstop>
+  <tabstop>annulerpushButton</tabstop>
+  <tabstop>accesRapidepushButton</tabstop>
+  <tabstop>recherchepushButton</tabstop>
+  <tabstop>creationRecuspushButton</tabstop>
+  <tabstop>ajouterPatpushButton</tabstop>
+  <tabstop>ajouterCoachpushButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>annulerpushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>motPasselineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>582</x>
+     <y>510</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>570</x>
+     <y>470</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>annulerpushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>nomUtilisateurlineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>625</x>
+     <y>515</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>580</x>
+     <y>443</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

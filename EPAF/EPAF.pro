@@ -62,3 +62,6 @@ FORMS    += mainwindow.ui \
     gestiongroupe.ui \
     recu.ui \
     ajouterpat.ui
+
+RESOURCES += \
+    ressources.qrc

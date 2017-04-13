@@ -8,6 +8,13 @@
 #include "recu.h"
 #include "coach.h"
 #include <QStackedWidget>
+#include <QMessageBox>
+#include <QTableView>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+#include <QtSql>
+
 namespace Ui {
 class connexionmainmenu;
 }
@@ -24,7 +31,7 @@ public:
     recherche *search = new recherche;
     recu *monRecu = new recu;
     coach *coachPage = new coach;
-    QStackedWidget *connexionstackedWidget = new QStackedWidget;
+
 public slots:
     void toMainMenu();
     void toAjouterPat();
@@ -32,6 +39,7 @@ public slots:
     void toRecherche();
     void toCoach();
     void toRecu();
+
 
 private:
     Ui::connexionmainmenu *ui;

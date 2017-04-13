@@ -25,7 +25,30 @@ connexionmainmenu::~connexionmainmenu()
 }
 void connexionmainmenu::toMainMenu()
 {
-    ui->MainMenustackedWidget->setCurrentIndex(1);
+    QString nomUtilisateur;
+    QString password;
+
+    QSqlQuery queryPassword;
+    queryPassword.prepare("SELECT administrateur.ADM_motDePasse from administrateur");
+    queryPassword.exec();
+    if(queryPassword.next() == true)
+        password = queryPassword.value("ADM_motDePasse").toString();
+
+    QSqlQuery queryUtiliasteur;
+    queryUtiliasteur.prepare("SELECT administrateur.ADM_nom from administrateur");
+    queryUtiliasteur.exec();
+    if(queryUtiliasteur.next() == true)
+        nomUtilisateur = queryUtiliasteur.value("ADM_nom").toString();
+
+    if(ui->motPasselineEdit->text() == password && ui->nomUtilisateurlineEdit->text() == nomUtilisateur)
+    {
+        ui->statusbar->showMessage("Connecter au système");
+        ui->MainMenustackedWidget->setCurrentIndex(1);
+    }
+    else
+    {
+        ui->statusbar->showMessage("Erreur lors de la connexion au système");
+    }
 }
 
 void connexionmainmenu::toAjouterPat()
@@ -48,3 +71,4 @@ void connexionmainmenu::toAcces()
 {
     ui->MainMenustackedWidget->setCurrentWidget(acces);
 }
+
