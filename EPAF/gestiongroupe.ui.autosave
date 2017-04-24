@@ -49,7 +49,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Valider</string>
+      <string>Ajouter</string>
      </property>
     </widget>
     <widget class="QWidget" name="formLayoutWidget_8">
@@ -484,7 +484,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Valider</string>
+         <string>Modifier</string>
         </property>
        </widget>
       </item>

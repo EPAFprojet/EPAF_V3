@@ -19,6 +19,17 @@ public slots:
     void AjouterGroupe();
     void validerAjouterGroupe();
 
+    void ModifierGroupe();
+    void validerModifierGroupe();
+    void RechercherGroupePourMod();
+
+    void SupprimerGroupe();
+
+
+    void RechercherGroupe();
+
+
+
 private:
     Ui::gestiongroupe *ui;
 };
