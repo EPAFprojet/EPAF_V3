@@ -37,7 +37,6 @@ SOURCES += main.cpp\
     powerskating.cpp \
     hockey.cpp \
     date.cpp \
-    date.cpp \
     ajouterpat.cpp
 
 HEADERS  += mainwindow.h \

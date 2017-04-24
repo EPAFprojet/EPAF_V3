@@ -9,18 +9,20 @@ public:
 
 public :
 
-    void setPatNom(QString nom);
-    void setPatPrenom(QString prenom);
+    bool setPatNom(QString nom);
+    bool setPatPrenom(QString prenom);
     void setDateNaissance(Date naissance);
-    void setCourriel(QString courriel);
+    bool setCourriel(QString courriel);
     void setAdresse(QString adresse);
-    void setVille(QString ville);
-    void setProvince(QString province);
-    void setCodePostal(QString codePostal);
-    void setParentResponsable(QString parent);
+    bool setVille(QString ville);
+    bool setProvince(QString province);
+    bool setCodePostal(QString codePostal);
+    bool setParentResponsable(QString parent);
     void setNumTel(QString numTel);
     void setCondiMed(QString condiMed);
     void setPaiementStatus(bool paiement);
+
+    QString upMahCase(QString myString);
 
     void patToBD();
 

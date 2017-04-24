@@ -30,6 +30,21 @@ Date::Date(int j)
     setJour(j);
 }
 
+int Date::getAnnee()
+{
+    return mA;
+}
+
+int Date::getMois()
+{
+    return mM;
+}
+
+int Date::getJour()
+{
+    return mJ;
+}
+
 Date::Date(int j, int m)
 {
     mA = getCurrentYear();
