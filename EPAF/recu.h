@@ -15,6 +15,12 @@ public:
     explicit recu(QWidget *parent = 0);
     ~recu();
 
+public slots:
+    void displayGroupe();
+    void displaySaison();
+    void displayNom();
+    void imprimerRecu();
+
 private:
     Ui::recu *ui;
 };
