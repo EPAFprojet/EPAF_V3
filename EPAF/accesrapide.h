@@ -17,11 +17,34 @@ public:
     gestiongroupe *gestGr = new gestiongroupe;
 
 public slots :
+    //==================== LISTE DES COACHS ====================//
     void toListeCoach();
+    void AfficherCoach();
+    void SupprimerCoach();
+
+    //==================== REPAS PAR GROUPE PAR JOUR ====================//
     void toListeRepasGroupeJour();
+    void RechercherGroupeRepas();
+    void AfficherRepasGroupe();
+
+
+    //==================== GÉRER LES GROUPES ====================//
     void toGestionGroupe();
+
+    //==================== LISTE REPAS ====================//
     void toListeRepas();
+    void AfficherRepas();
+
+    //==================== MODIFIER COACH ====================//
     void toModifierCoach();
+
+    //==================== JOUEURS PAR GROUPE ====================//
+    void toListeJoueursGroupe();
+    void RechercherListeJoueur();
+    void AfficherListeJoueur();
+
+
+
 
 private:
     Ui::accesrapide *ui;

@@ -255,7 +255,8 @@ void gestiongroupe::RechercherGroupe()
     }
     else
     {
-        QMessageBox::warning(this, "Recherche invalide", "Vous devz choisir un type de recherche");
+        QMessageBox::warning(this, "Recherche invalide", "Vous devez choisir un type de recherche");
+        ui->RechercheGroupelineEdit->clear();
     }
 }
 
