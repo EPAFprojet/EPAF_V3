@@ -22,6 +22,7 @@ void Hockey::setEquipe(QString equipe)
 void Hockey::setCategorie(QString cat)
 {
     mCategorie = cat;
+    qDebug() << mCategorie;
 }
 
 void Hockey::setPosition(QString position)
@@ -39,12 +40,12 @@ void Hockey::setHockGroupe(QString groupe)
     mHockGroupe = groupe;
 }
 
-void Hockey::setTraiteur(bool traiteur)
+void Hockey::setTraiteur(int traiteur)
 {
     mTraiteur = traiteur;
 }
 
-void Hockey::setCombine(bool combine)
+void Hockey::setCombine(int combine)
 {
     mCombine = combine;
 }
@@ -57,5 +58,7 @@ void Hockey::setLieuCombine(QString lieuCombine)
 void Hockey::hocToBD()
 {
     QSqlQuery query;
-    query.prepare("INSERT INTO `hockey` (`HOC_numauto`, `HOC_PAT_num`, `HOC_equipe`, `HOC_cat`, `HOC_position`, `HOC_lance/mitaine`, `HOC_groupe`, `HOC_Traiteur`, `HOC_combine`, `HOC_LieuCombine`) VALUES (NULL, '196', 'Adams', 'AA', 'Gardien', 'Gauche', 'U9', '0', '0', NULL);");
+    query.prepare("INSERT INTO hockey(HOC_numauto, HOC_PAT_num, HOC_equipe, HOC_cat, HOC_position, HOC_lance, HOC_groupe, HOC_Traiteur, HOC_combine, HOC_LieuCombine) "
+                  "VALUES(NULL,'"+QString::number(mIDpat)+"','"+mEquipe+"','"+mCategorie+"','"+mPosition+"','"+mLateralite+"','"+mHockGroupe+"','"+QString::number(mTraiteur)+"','"+QString::number(mCombine)+"','"+mLieuComb+"')");
+    query.exec();
 }

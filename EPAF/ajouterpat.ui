@@ -49,11 +49,11 @@
        <x>120</x>
        <y>350</y>
        <width>811</width>
-       <height>211</height>
+       <height>241</height>
       </rect>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -119,16 +119,9 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLineEdit" name="equipelineEdit">
+         <widget class="QLineEdit" name="hequipelineEdit">
           <property name="maxLength">
            <number>40</number>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="catlineEdit">
-          <property name="maxLength">
-           <number>8</number>
           </property>
          </widget>
         </item>
@@ -154,7 +147,7 @@
          </widget>
         </item>
         <item row="7" column="1">
-         <widget class="QLineEdit" name="LieulineEdit"/>
+         <widget class="QLineEdit" name="hLieulineEdit"/>
         </item>
         <item row="3" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout">
@@ -178,7 +171,7 @@
          <widget class="QComboBox" name="groupeHockcomboBox"/>
         </item>
         <item row="2" column="1">
-         <widget class="QComboBox" name="posicomboBox">
+         <widget class="QComboBox" name="hposicomboBox">
           <item>
            <property name="text">
             <string/>
@@ -192,6 +185,25 @@
           <item>
            <property name="text">
             <string>Joueur</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="hCatcombo">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cat 1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cat 2</string>
            </property>
           </item>
          </widget>
@@ -236,17 +248,41 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="traitLundilineEdit"/>
-        </item>
         <item row="1" column="1">
-         <widget class="QLineEdit" name="traitMardilineEdit"/>
+         <widget class="QComboBox" name="traitMarcomboBox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="traitluncomboBox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+         </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLineEdit" name="traitMercredilineEdit"/>
+         <widget class="QComboBox" name="traitMercomboBox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+         </widget>
         </item>
         <item row="3" column="1">
-         <widget class="QLineEdit" name="traitJeudilineEdit"/>
+         <widget class="QComboBox" name="traitJeucomboBox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -263,6 +299,35 @@
         <string>Traiteur</string>
        </property>
       </widget>
+      <widget class="QWidget" name="HockErreur" native="true">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>170</y>
+         <width>196</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="hockErreurLay">
+        <item>
+         <widget class="QLabel" name="label_22">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="ressources.qrc">:/img/!.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_34">
+          <property name="text">
+           <string>Veuillez remplir tous les champs!</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
      <widget class="QWidget" name="Patinage">
       <attribute name="title">
@@ -274,7 +339,7 @@
          <x>9</x>
          <y>9</y>
          <width>351</width>
-         <height>141</height>
+         <height>161</height>
         </rect>
        </property>
        <layout class="QFormLayout" name="formLayout_4">
@@ -313,6 +378,96 @@
           </property>
          </widget>
         </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="groupePAcomboBox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 2</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="nivHabcomboBox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 2</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="nivStyleCbox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 2</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="nivDanseCbox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 2</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="numPatCAlineEdit">
+          <property name="maxLength">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_39">
+          <property name="text">
+           <string>Numéro patinage Canada</string>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="1">
          <widget class="QLineEdit" name="clublineEdit">
           <property name="maxLength">
@@ -320,29 +475,34 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="danselineEdit">
-          <property name="maxLength">
-           <number>20</number>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="paErreur" native="true">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>170</y>
+         <width>196</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="paErreurLay">
+        <item>
+         <widget class="QLabel" name="label_35">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="ressources.qrc">:/img/!.png</pixmap>
           </property>
          </widget>
         </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="stylelineEdit">
-          <property name="maxLength">
-           <number>20</number>
+        <item>
+         <widget class="QLabel" name="label_36">
+          <property name="text">
+           <string>Veuillez remplir tous les champs!</string>
           </property>
          </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QLineEdit" name="habiletelineEdit">
-          <property name="maxLength">
-           <number>20</number>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <widget class="QComboBox" name="groupePAcomboBox"/>
         </item>
        </layout>
       </widget>
@@ -375,15 +535,56 @@
           </property>
          </widget>
         </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="groupePOWcomboBox"/>
+        </item>
         <item row="1" column="1">
-         <widget class="QLineEdit" name="niveauPowlineEdit">
-          <property name="maxLength">
-           <number>15</number>
+         <widget class="QComboBox" name="powNivComboBox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valeur 2</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="POWerreur" native="true">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>170</y>
+         <width>196</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="POWErreurLay">
+        <item>
+         <widget class="QLabel" name="label_37">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="ressources.qrc">:/img/!.png</pixmap>
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QComboBox" name="groupePOWcomboBox"/>
+        <item>
+         <widget class="QLabel" name="label_38">
+          <property name="text">
+           <string>Veuillez remplir tous les champs!</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -393,7 +594,7 @@
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>570</y>
+       <y>600</y>
        <width>801</width>
        <height>23</height>
       </rect>

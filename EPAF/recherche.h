@@ -14,6 +14,10 @@ class recherche : public QMainWindow
 public:
     explicit recherche(QWidget *parent = 0);
     ~recherche();
+public slots:
+    void startSearch();
+private slots:
+    void on_recherchetableView_doubleClicked(const QModelIndex &index);
 
 private:
     Ui::recherche *ui;

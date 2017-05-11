@@ -11,13 +11,14 @@ public:
     void setNoClub(int club);
     void setNivDanse(QString danse);
     void setNivStyle(QString style);
+    void setNivHab(QString hab);
     void setPAGroupe(QString groupe);
-
+    void setNumPa(int paCa);
     void PAtoBD();
 
 private:
     int mIDPat; // ID du patineur
-    int mNumPa = NULL; //Numéro auto de patineur artistique.
+    int mNumPa; //Numéro patinage artistique;
     int mNoClub;
     QString mNivDanse;
     QString mNivHab;

@@ -21,6 +21,8 @@ public :
     void setNumTel(QString numTel);
     void setCondiMed(QString condiMed);
     void setPaiementStatus(bool paiement);
+    int getverifAnnee();
+    void setID(int id);
 
     QString upMahCase(QString myString);
 
@@ -28,10 +30,10 @@ public :
 
 private:
 
-    int mPatNum = NULL; //Num auto
+    int mPatNum;
     QString mPatNom;
     QString mPatPrenom;
-    Date mDateNaissance; //Passer le ui->label de la date dans la classe pour vérifications.
+    Date mDateNaissance; //Passe le ui->label de la date dans la classe pour vérifications.
     QString mCourriel;
     QString mAdresse;
     QString mVille;

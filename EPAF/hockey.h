@@ -13,8 +13,8 @@ public :
     void setPosition(QString position);
     void setLateralite(QString lat);
     void setHockGroupe(QString groupe);
-    void setTraiteur(bool traiteur);
-    void setCombine(bool combine);
+    void setTraiteur(int traiteur);
+    void setCombine(int combine);
     void setLieuCombine(QString lieuCombine);
 
     void hocToBD();
@@ -27,9 +27,9 @@ private:
     QString mPosition;
     QString mLateralite;
     QString mHockGroupe;
-    bool mTraiteur;
-    bool mCombine;
-    QString mLieuComb;
+    int mTraiteur = 0;
+    int mCombine = 0;
+    QString mLieuComb = NULL;
 };
 
 #endif // HOCKEY_H

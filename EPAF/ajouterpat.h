@@ -19,9 +19,13 @@ public slots:
     void isCombine();
     void verifAjout();
     bool validerAjout();
-    bool createDate(Patineur monPatineur);
+    bool ajouterHockey();
+    bool ajouterPatArt();
+    bool ajouterPow();
+    Patineur createDate(Patineur monPatineur);
 private:
     Ui::ajouterPat *ui;
+    int numPat;
 };
 
 #endif // AJOUTERPAT_H

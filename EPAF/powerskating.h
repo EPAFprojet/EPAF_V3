@@ -10,7 +10,7 @@ public:
 public :
     void setPowGroupe(QString groupe);
     void setNiveau(QString niv);
-
+    void setPatID(int id);
     void powToBD();
 
 private:
