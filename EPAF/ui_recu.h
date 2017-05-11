@@ -23,6 +23,7 @@
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
+#include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -46,20 +47,21 @@ public:
     QTableView *tableView;
     QMenuBar *menubar;
     QStatusBar *statusbar;
+    QToolBar *toolBar;
 
     void setupUi(QMainWindow *recu)
     {
         if (recu->objectName().isEmpty())
             recu->setObjectName(QStringLiteral("recu"));
-        recu->resize(800, 600);
+        recu->resize(956, 739);
         centralwidget = new QWidget(recu);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         imprimerButton = new QPushButton(centralwidget);
         imprimerButton->setObjectName(QStringLiteral("imprimerButton"));
-        imprimerButton->setGeometry(QRect(359, 510, 121, 31));
+        imprimerButton->setGeometry(QRect(319, 590, 121, 31));
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(220, 179, 181, 31));
+        horizontalLayoutWidget->setGeometry(QRect(100, 150, 181, 31));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -80,7 +82,7 @@ public:
 
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(220, 100, 301, 80));
+        verticalLayoutWidget->setGeometry(QRect(100, 71, 301, 80));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -101,20 +103,29 @@ public:
 
         Recus = new QLabel(centralwidget);
         Recus->setObjectName(QStringLiteral("Recus"));
-        Recus->setGeometry(QRect(280, 20, 271, 31));
+        Recus->setGeometry(QRect(320, 20, 271, 31));
         Recus->setFont(font);
         Recus->setAlignment(Qt::AlignCenter);
         tableView = new QTableView(centralwidget);
         tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setGeometry(QRect(220, 210, 391, 291));
+        tableView->setGeometry(QRect(20, 210, 831, 351));
         recu->setCentralWidget(centralwidget);
+        imprimerButton->raise();
+        horizontalLayoutWidget->raise();
+        verticalLayoutWidget->raise();
+        Recus->raise();
+        tableView->raise();
+        Recherche->raise();
         menubar = new QMenuBar(recu);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 20));
+        menubar->setGeometry(QRect(0, 0, 956, 21));
         recu->setMenuBar(menubar);
         statusbar = new QStatusBar(recu);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         recu->setStatusBar(statusbar);
+        toolBar = new QToolBar(recu);
+        toolBar->setObjectName(QStringLiteral("toolBar"));
+        recu->addToolBar(Qt::TopToolBarArea, toolBar);
 
         retranslateUi(recu);
 
@@ -130,6 +141,7 @@ public:
         nomRadioButton->setText(QApplication::translate("recu", "Nom", Q_NULLPTR));
         Recherche->setText(QApplication::translate("recu", "Recherche", Q_NULLPTR));
         Recus->setText(QApplication::translate("recu", "Re\303\247us", Q_NULLPTR));
+        toolBar->setWindowTitle(QApplication::translate("recu", "toolBar", Q_NULLPTR));
     } // retranslateUi
 
 };
