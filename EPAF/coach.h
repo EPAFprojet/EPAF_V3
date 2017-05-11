@@ -4,19 +4,23 @@
 #include <QMainWindow>
 
 namespace Ui {
-class coach;
+class Coach;
 }
 
-class coach : public QMainWindow
+class Coach : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit coach(QWidget *parent = 0);
-    ~coach();
+    explicit Coach(QWidget *parent = 0);
+    ~Coach();
+
+public slots:
+    void test();
+    void valider();
 
 private:
-    Ui::coach *ui;
+    Ui::Coach *ui;
 };
 
 #endif // COACH_H
