@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="verticalLayoutWidget">
@@ -45,7 +45,19 @@
           </font>
          </property>
          <property name="text">
-          <string>Gérer groupe</string>
+          <string>Gérer groupes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="coachpushButton">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Gérer coachs</string>
          </property>
         </widget>
        </item>
@@ -70,18 +82,6 @@
          </property>
          <property name="text">
           <string>Liste des repas par groupe par jour</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="coachpushButton">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Liste des coachs</string>
          </property>
         </widget>
        </item>
@@ -517,7 +517,7 @@
        </font>
       </property>
       <property name="title">
-       <string>Liste des coachs</string>
+       <string>Gérer coachs</string>
       </property>
       <widget class="QPushButton" name="AfficherCoachpushButton">
        <property name="geometry">

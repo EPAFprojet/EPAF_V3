@@ -44,7 +44,7 @@ accesrapide::~accesrapide()
 {
     delete ui;
 }
-//======================================== LISTE COACHS ========================================//
+//======================================== GÉRER COACHS ========================================//
 void accesrapide::toListeCoach()
 {
     ui->accesstackedWidget->setCurrentIndex(3);
